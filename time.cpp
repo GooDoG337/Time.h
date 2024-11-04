@@ -2,6 +2,9 @@
 using namespace chron;
 Time::Time(int h, int m, int s)
 {
+  if(s < 0 || s > 59 || m < 0 || m > 59 || h < 0 || h > 23) {
+  	throw IncorrectTimeException();
+  }
 	seconds=3600*h+60*m+s;
 	normalise(); 
 }

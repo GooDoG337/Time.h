@@ -8,6 +8,7 @@ namespace chron {
 		int seconds;
 		void normalise();
 	public:
+     	class IncorrectTimeException { };
 		Time() = default;
 		Time(int h, int m, int s);
 		Time(int s):Time(0,0,s) { };
